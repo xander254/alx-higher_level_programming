@@ -1,2 +1,2 @@
-#!/bin/python3
-print("\"Programming is like building a multilingual puzzle")
+def print_string():
+    print("\"Programming is like building a multilingual puzzle")
