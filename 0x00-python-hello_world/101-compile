@@ -1,2 +1,6 @@
 #!/usr/bin/bash
 python3 -m py_compile "$PYFILE"
+BASENAME=$(basename "$PYFILE" .py)
+PYCACHE_DIR="__pycache__"
+PYC_FILE=$(ls "$PYCACHE_DIR" | grep "$BASENAME" | grep ".pyc")
+mv "SPYCACHE_DIR/$PYC_FILE" "${BASENAME}c"
