@@ -4,4 +4,3 @@ for char in range(122, 96, -1):
         print("{}".format(chr(char)), end="")
     else:
         print("{}".format(chr(char - 32)), end="")
-print()
