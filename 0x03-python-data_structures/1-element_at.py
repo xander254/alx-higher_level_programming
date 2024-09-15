@@ -4,7 +4,7 @@ def element_at(my_list, idx):
     if idx < 0:
         return None
     # Check if index is out of range
-    if idx > len(my_list):
+    if idx >= len(my_list):
         return None
     # Access items
     return my_list[idx]
