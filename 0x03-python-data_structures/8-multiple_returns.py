@@ -1,4 +1,4 @@
-#!/usr/bin.python3
+#!/usr/bin/python3
 # Func defination
 def multiple_returns(sentence):
     # Check if sentence is empty, if so return None
