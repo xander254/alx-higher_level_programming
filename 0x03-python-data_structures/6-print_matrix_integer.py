@@ -3,9 +3,9 @@
 def print_matrix_integer(matrix=[[]]):
     # initiate twoo loops to loop over the row and element then print
     for row in matrix:
-        for num in row:
-            if num >= len(matrix):
-                print("{}".format(num), end=" ")
+        for num in range(len(row)):
+            if num == len(row) - 1:
+                print("{}".format(row[num]), end="")
             else:
-                print("{}".format(num), end=" ")
+                print("{}".format(row[num]), end=" ")
         print()
