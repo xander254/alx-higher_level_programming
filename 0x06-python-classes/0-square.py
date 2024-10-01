@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 
 class Square:
     """
@@ -6,5 +5,4 @@ class Square:
     Attributes: None
     Methods: None
     """
-    def __init__(self):
-        pass
+    pass
