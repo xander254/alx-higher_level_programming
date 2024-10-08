@@ -7,13 +7,15 @@ A method that creates a class Rectangle
 class Rectangle:
     """
     A class representing a rectangle object
+    This class allows setting of height and width with validattions
     """
     def __init__(self, width=0, height=0):
         """
         initiator
-        :width (int) the width of the rectangle
-        :height (int) the height of the rectangle
+        :param width: the width of the rectangle
+        :param height: the height of the rectangle
         """
+
         self.__width = width
         self.__height = height
 
@@ -39,3 +41,4 @@ class Rectangle:
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
+        self.__height = value
