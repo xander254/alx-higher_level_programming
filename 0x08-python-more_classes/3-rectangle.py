@@ -62,11 +62,5 @@ class Rectangle:
         returns a string representation of a rectngle using #
         """
         if self.__width == 0 or self.__height == 0:
-            return
+            return ""
         return "\n".join("#" * self.__width for _ in range(self.__height))
-
-    def __repr__(self):
-        """
-        Return a string that represents a rectangle
-        """
-        return ("{}, {}".format(self.__width, self.__height))
