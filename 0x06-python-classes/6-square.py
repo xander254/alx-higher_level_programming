@@ -2,7 +2,6 @@
 """
 A module that creates a class Square
 """
-from shutil import get_terminal_size
 
 
 class Square:
