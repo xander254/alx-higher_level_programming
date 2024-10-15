@@ -1,0 +1,10 @@
+"""
+
+    Doctests:
+    >>> bg = BaseGeometry("my_geometry", 42)
+    >>> bg.name
+    'my_geometry'
+    >>> bg.value
+    42
+"""
+
