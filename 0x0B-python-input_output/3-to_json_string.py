@@ -12,5 +12,4 @@ def to_json_string(my_obj):
      Args:
         my_obj: object to be turned to json
     """
-    file = json.dumps(my_obj)
-    return file
+    return json.dumps(my_obj)
