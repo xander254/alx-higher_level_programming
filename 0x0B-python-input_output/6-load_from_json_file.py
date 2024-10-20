@@ -12,6 +12,6 @@ def load_from_json_file(filename):
         filename: The name of the json file
     """
     with open(filename, 'r') as myJsonFile:
-       mydata  = myJsonFile.read()
+        mydata = myJsonFile.read()
     my_obj = json.loads(mydata)
     return my_obj
