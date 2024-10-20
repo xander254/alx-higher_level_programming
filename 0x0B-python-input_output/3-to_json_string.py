@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-import json
 """
 A module that returns a JSON rep fo an object
 """
+import json
 
 
 def to_json_string(my_obj):
@@ -12,5 +12,5 @@ def to_json_string(my_obj):
      Args:
         my_obj: object to be turned to json
     """
-    json_file = json.dumps(my_obj)
+    json_file = json.dumps(my_obj, sort_keys=True, indent=2)
     return json_file
