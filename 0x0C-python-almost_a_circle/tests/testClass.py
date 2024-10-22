@@ -1,12 +1,13 @@
 #!/usr/bin/python3
 from models.base import Base
 """
-Unit tests for the Base Class
+Unit tests for the Base Class.
 """
 import unittest
 
 
 class TestBase(unittest.TestCase):
+
     def test_init_without_id(self):
         b1 = Base()
         self.assertEqual(b1.id, 1)
