@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+
 """
 A module that creates the first class
 """
@@ -12,7 +12,7 @@ class Base:
 
     def __init__(self, id=None):
         """
-        Initialize the class wit an id attribute
+        Initialize the class with an id attribute
         """
         if id is not None:
             self.id = id
