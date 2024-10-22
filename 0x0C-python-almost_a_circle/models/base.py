@@ -1,4 +1,4 @@
-
+#!/usr/bin/python3
 """
 A module that creates the first class
 """
@@ -21,4 +21,9 @@ class Base:
             self.id = Base.__nb_objects
 
     def __str__(self):
+        """
+        retrun string represedntation of id
+        Args:
+            self.id (int): the id of te instance
+        """
         return f"{self.id}"
