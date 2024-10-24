@@ -15,10 +15,10 @@ class Rectangle(Base):
         initialization of the class with private attributes
         """
         super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
     @property
     def width(self):
@@ -28,11 +28,15 @@ class Rectangle(Base):
         return self.__width
 
     @width.setter
-    def width(self):
+    def width(self, value):
         """
         Width setter
         """
-        self.__width = width
+        if not isinstance(value, int):
+            raise TypeError("width must be an integer")
+        if value <= 0:
+            raise ValueError("width must be > 0")
+        self.__width = value
 
     @property
     def height(self):
@@ -42,11 +46,15 @@ class Rectangle(Base):
         return self.__height
 
     @height.setter
-    def height(self):
+    def height(self, value):
         """
         Height setter
         """
-        self.__height = height
+        if not isinstance(value, int):
+            raise TypeError("height must be an integer")
+        if value < 0:
+            raise ValueError("height must be >= 0")
+        self.__height = value
 
     @property
     def x(self):
@@ -56,11 +64,15 @@ class Rectangle(Base):
         return self.__x
 
     @x.setter
-    def x(self):
+    def x(self, value):
         """
         x setter
         """
-        self.__x = x
+        if not isinstance(value, int):
+            raise TypeError("x must be an integer")
+        if value < 0:
+            raise ValueError("x must be >= 0")
+        self.__x = value
 
     @property
     def y(self):
@@ -70,11 +82,15 @@ class Rectangle(Base):
         return self.__y
 
     @y.setter
-    def y(Self):
+    def y(self, value):
         """
         y setter
         """
-        self.__y = y
+        if not isinstance(value, int):
+            raise TypeError("y must be an integer")
+        if value < 0:
+            raise ValueError("y must be >= 0")
+        self.__y = value
 
     def __str__(self):
         """
