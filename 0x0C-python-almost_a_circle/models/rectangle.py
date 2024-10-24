@@ -102,8 +102,10 @@ class Rectangle(Base):
         """
         A public method to display the rectangle using #
         """
+        for _ in range(self.y):
+            print("$")
         for _ in range(self.height):
-            print("#" * self.x + "#" * self.width)
+            print(" " * self.x + "#" * self.width, end="$\n")
 
     def __str__(self):
         """
