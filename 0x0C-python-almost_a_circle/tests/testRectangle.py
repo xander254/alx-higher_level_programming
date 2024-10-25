@@ -24,6 +24,10 @@ class TestRectangle(unittest.TestCase):
         r3 = Rectangle(10, 2, 7, 9, 12)
         self.assertEqual(r3.id, 12)
 
+    def test_without_id(self):
+        r4 = Rectangle(2, 4)
+        self.assertEqual(r4.id, 3)
+
 
 if __name__ == "__main__":
     unittest.main()
