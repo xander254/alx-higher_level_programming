@@ -108,6 +108,9 @@ class Rectangle(Base):
             print(" " * self.x + "#" * self.width, end="$\n")
 
     def update(self, *args):
+        """
+        Update function that updates values using args
+        """
         if len(args) >= 1:
             self.id = args[0]
         if len(args) >= 2:
