@@ -2,6 +2,7 @@
 """
 A module that creates the first class
 """
+import json
 
 
 class Base:
@@ -27,3 +28,14 @@ class Base:
             self.id (int): the id of te instance
         """
         return f"{self.id}"
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """
+        a static mehod that returns jso representation of
+        listdictionaries
+        """
+        if list_dictionaries is None:
+            return "[]"
+        else:
+            return json.dumps(list_dictionaries)
