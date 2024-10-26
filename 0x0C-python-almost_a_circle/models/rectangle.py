@@ -4,6 +4,7 @@ A module that creates a class Rectangle and inherits some propertes
 from the Base class
 """
 from models.base import Base
+import json
 
 
 class Rectangle(Base):
@@ -141,3 +142,17 @@ class Rectangle(Base):
         """
         return (f"[Rectangle] ({self.id}) {self.__x}/{self.__y} -"
                 f" {self.__width}/{self.__height}")
+
+    def to_dictionary(self):
+        """
+        return dictionary representation of rectangle
+        """
+        dictionary = {
+            "x": self.x,
+            "y": self.y,
+            "id": self.id,
+            "height": self.height,
+            "width": self.width,
+            "y": self.y
+        }
+        return dictionary
