@@ -55,7 +55,7 @@ class Square(Rectangle):
             if "x" in kwargs:
                 self.x = kwargs["x"]
             if "y" in kwargs:
-                self.y = kwargs["x"]
+                self.y = kwargs["y"]
 
     def display(self):
         """
