@@ -17,6 +17,12 @@ if __name__ == "__main__":
     ):
         print("Unknown operator. Available operators: +, -, * and /")
         sys.exit(1)
+
+    a = sys.argv[1]
+    b = sys.argv[3]
+    a = int(a)
+    b = int(b)
+
     if (sys.argv[2] == '+'):
         print("{} + {} = {}".format(a, b, add(a, b)))
     if (sys.argv[2] == '/'):
