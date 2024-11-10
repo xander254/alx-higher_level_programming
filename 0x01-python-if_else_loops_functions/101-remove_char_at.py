@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 # A function that creates a cp of a string removing a character at
 # n position
 def remove_char_at(str, n):
