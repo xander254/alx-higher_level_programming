@@ -13,7 +13,9 @@ def save_to_json_file(my_obj, filename):
         my_obj: A python onject
         filename: the file where the json rep will be saved
     """
-    data = json.dumps(my_obj)
-
-    with open(filename, 'w') as myJsonFile:
-        myJsonFile.write(data)
+    try:
+        data = json.dumps(my_obj)
+        with open(filename, 'w') as myJsonFile:
+            myJsonFile.write(data)
+    except Exception as e:
+        print(e)
