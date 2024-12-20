@@ -2,11 +2,7 @@
 const Base = require('./5-square');
 
 module.exports = class Square extends Base {
-  constructor(size) {
-    super(size);
-  }
-
-  charPrint(c) {
+  charPrint (c) {
     if (c === undefined) {
       c = 'X';
     }
