@@ -6,6 +6,7 @@ the letter a from the database hbtn_0e_6_usa
 import sys
 from model_state import Base, State
 from sqlalchemy import (create_engine)
+from sqlalchemy import delete
 from sqlalchemy.orm import sessionmaker
 
 
@@ -17,9 +18,8 @@ if __name__ == "__main__":
 
     Session = sessionmaker(bind=engine)
     session = Session()
-
-    states = session.query(State).where(State.name.like('%a%'))
-    for state in states:
-        session.delete(state)
+    conn = engine.connect()
+    stmt = delete(State).where(State.name.like('%a%'))
+    conn.execute(stmt)
     session.commit()
     session.close()
