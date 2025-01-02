@@ -3,6 +3,7 @@
 a Python file similar to model_state.py named model_city.py
 that contains the class definition of a City.
 """
+from sqlalchemy.orm import declarative_base
 from model_state import Base
 from sqlalchemy import Column, Integer, String, ForeignKey
 
