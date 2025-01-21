@@ -1,3 +1,3 @@
 #!/bin/bash
 # Display the body of a 200 status code response
-curl -sL -w "%{http_code}" "$1" | awk '/200$/{exit}1'
+[ "$(curl -s -o /dev/null -w "%{http_code}" -L "$1")" = "200" ] && curl -sL "$1"
