@@ -15,9 +15,11 @@ Returns:
 import urllib.request
 import sys
 
-url = sys.argv[1]
+if __name__ == "__main__":
+    url = sys.argv[1]
 
-with urllib.request.urlopen(url) as response:
-    request_id = response.headers.get('X-Request-ID')
+    with urllib.request.urlopen(url) as response:
+        # Get the value of the X-Request-ID from the header
+        request_id = response.headers.get('X-Request-ID')
 
-print(f"{request_id}\n")
+    print(f"{request_id}\n")
