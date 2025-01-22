@@ -18,8 +18,12 @@ import sys
 if __name__ == "__main__":
     url = sys.argv[1]
 
-    with urllib.request.urlopen(url) as response:
+    opener = urllib.request.build_opener(urllib.request.HTTPRedirectHandler())
+    with opener.open(url) as response:
         # Get the value of the X-Request-ID from the header
         request_id = response.headers.get('X-Request-ID')
 
-    print(f"{request_id}\n")
+    if request_id is None:
+        print("X-Request-ID: Not found")
+    else:
+        print(f"{request_id}\n")
