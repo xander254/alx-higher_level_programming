@@ -14,7 +14,7 @@ if (!url || fileName === undefined) {
 request(url, function (error, reponse, body) {
   if (error) {
     console.error(error);
-    process, exit(1);
+    process.exit(1);
   }
 
   fs.writeFile(fileName, body, 'utf-8', (err) => {
