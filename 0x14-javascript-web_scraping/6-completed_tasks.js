@@ -28,4 +28,3 @@ request(apiUrl, function (error, response, body) {
     console.log(`User ${userId} completed ${count} tasks`);
   });
 });
-
