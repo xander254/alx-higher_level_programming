@@ -10,7 +10,7 @@ if (!filepath) {
 
 fs.readFile(filepath, "utf-8", (err, data) => {
   if (err) {
-  console.error('${err.message}');
+  console.error(err);
   process.exit(1);
   } 
   console.log(data);
